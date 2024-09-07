@@ -1,55 +1,34 @@
-Automatic-Number-Plate-Recognition-YOLOv8
-Project Setup
+# Automatic-Number-Plate-Recognition-YOLOv8
 
-    Create a Python Environment:
+## Project Setup
 
-    bash
-
+* Make an environment with python using the following command 
+``` bash
 python -m venv pyenv
-
-Activate the Environment:
-
-bash
-
+```
+* Activate the environment
+``` bash
 .\pyenv\Scripts\activate
-
-Create Required Folders:
-
-bash
-
-mkdir Src Output
-
-Install Project Dependencies:
-
-bash
-
+``` 
+* Create Src & Output Folders 
+``` bash
+mkdir Src, Output
+``` 
+* Install the project dependencies using the following command 
+```bash
 pip install -r requirements.txt
-
-Run the Main Script:
-
-    This will process the sample video and generate test.csv.
-
-bash
-
+```
+* Run main.py with the sample video file to generate the test.csv file 
+``` python
 python main.py
-
-Interpolate Missing Data:
-
-    This step smooths out the data to match frames.
-
-bash
-
+```
+* Run the add_missing_data.py file for interpolation of values to match up for the missing frames and smooth output.
+```python
 python add_missing_data.py
-
-Visualize the Results:
-
-    Pass the interpolated CSV files to generate smooth license plate detection output.
-
-bash
-
-    python visualize.py
-
-Data
-
-    Place your video files in the Src folder.
-    The processed output will be saved in the Output folder.
+```
+* Finally run the visualize.py passing in the interpolated csv files and hence obtaining a smooth output for license plate detection.
+```python
+python visualize.py
+```
+## Data
+keep your video in Src folder and the output will be in Output folder
